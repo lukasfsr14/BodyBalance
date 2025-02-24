@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="StartTest.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/OBJLoader.js"></script>
+    <title>Skelett und Muskelerkrankungen</title>
+</head>
+<header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="http://127.0.0.1:5500/Tattamusch%20PO/Wettbewerb/StartTest/StartTest.html#about" class="he">Home</a></li>
+            <li><a href="http://127.0.0.1:5500/Tattamusch%20PO/Wettbewerb/StartTest/Video.html#about" class="he">Video</a></li>
+            <li><a href="#contact" class="he">Unsere App</a></li>
+            <li><a href="http://127.0.0.1:5500/Tattamusch%20PO/Wettbewerb/StartTest/Skelett.html" class="he">Skelett Aufklärung</a></li>
+            <li><a href="http://127.0.0.1:5500/Tattamusch%20PO/Wettbewerb/StartTest/Kontakt.html" class="he">Kontakt</a></li>
+        </ul>
+          <!-- Neuer div-Container für den Titel -->
+          <div class="title">Skelett und Muskelerkrankungen</div>   
+    </nav>
+</header>
+<body>
+    <div id="Abstand">
+<br>
+
+            <img class="container" id="titlbild" src="./Bildeer/Titelbild.jpg" alt="Mensch zum Skelett">
+
+        <h1>Arten und Ausprägungsformen von MSE</h1>
+            <div class="container">
+            <div class="item">
+                <img src="./Bildeer/RN.jpg" alt="Rücken- und Nackenschmerzen" >
+                <div class="text">
+                    <p> Rücken- und Nackenschmerzen gehören zu den häufigsten Beschwerden.</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./Bildeer/Gelenk.jpg" alt="Gelenkerkrankungen">
+                <div class="text">
+                    <p> Gelenkerkrankungen können durch Verschleiß oder Krankheit verursacht werden oder als Folge von Arbeitsunfällen auftreten.</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./Bildeer/MV.jpg" alt="Muskelverletzungen">
+                <div class="text">
+                    <p> Muskelverletzungen können durch anstrengende oder wiederholende Tätigkeiten verursacht werden.</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./Bildeer/KE.jpg" alt="Knochenerkrankungen">
+                <div class="text">
+                    <p> Knochenerkrankungen können z. B. Folge eines Knochenbruchs durch einen Arbeitsunfall sein.</p>
+                </div>
+            </div>
+        </div>
+
+<br><br><br><br><br><br><br><br>
+
+<div class="container">
+    <h1>Quiz über Skelett- und Muskelerkrankungen</h1>
+    
+    <label for="name">Dein Name:</label>
+    <input type="text" id="name" placeholder="Name eingeben">
+    
+    <button id="startButton">Start</button>
+
+    <div id="quiz" class="hidden">
+        <div id="timer">Zeit: 0 Sekunden</div>
+
+        <!-- Fragen -->
+        <div class="question">
+            <p>1. Welche Körperregion ist am häufigsten von Muskel-Skelett-Beschwerden betroffen?</p>
+            <input type="radio" name="q1" value="a"> Nacken und Halswirbelsäule<br>
+            <input type="radio" name="q1" value="b"> Hände und Handgelenke<br>
+            <input type="radio" name="q1" value="c"> Kniegelenke
+        </div>
+
+        <div class="question">
+            <p>2. Was ist eine häufige Ursache für Muskel-Skelett-Erkrankungen?</p>
+            <input type="radio" name="q2" value="a"> Übermäßige Bewegung<br>
+            <input type="radio" name="q2" value="b"> Bewegungsmangel<br>
+            <input type="radio" name="q2" value="c"> Gute Haltung
+        </div>
+
+        <div class="question">
+            <p>3. Wie nennt man eine Entzündung der Gelenke?</p>
+            <input type="radio" name="q3" value="a"> Arthrose<br>
+            <input type="radio" name="q3" value="b"> Arthritis<br>
+            <input type="radio" name="q3" value="c"> Osteoporose
+        </div>
+
+        <div class="question">
+            <p>4. Was ist ein typisches Symptom von Osteoporose?</p>
+            <input type="radio" name="q4" value="a"> Knochenschwund<br>
+            <input type="radio" name="q4" value="b"> Muskelschwäche<br>
+            <input type="radio" name="q4" value="c"> Gelenkversteifung
+        </div>
+
+        <div class="question">
+            <p>5. Welche Erkrankung betrifft die Bandscheiben?</p>
+            <input type="radio" name="q5" value="a"> Bandscheibenvorfall<br>
+            <input type="radio" name="q5" value="b"> Skoliose<br>
+            <input type="radio" name="q5" value="c"> Rheuma
+        </div>
+
+        <!-- Abgabe-Button -->
+        <button id="submitButton">Abgeben</button>
+    </div>
+
+    <!-- Ergebnis -->
+    <div id="result"></div>
+
+</div>
+
+
+<div id="leaderboard" class="hidden">
+    <h2>Rangliste</h2>
+    <ol id="leaderboard-list"></ol>
+</div>
+
+
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="services">
+            <div class="service">
+                <img src="./Bildeer/Myasthenia.jpg" alt="Myasthenia">
+                <h3>Myasthenia Gravis</h3>
+                <p>Myasthenia gravis (auch Myasthenie) ist eine Autoimmunerkrankung. Bei Betroffenen stören fehlgesteuerte Antikörper die Kommunikation zwischen Nerv und Muskel. Dadurch ermüdet die Muskulatur an verschiedenen Stellen des Körpers, vor allem unter Belastung und bei Müdigkeit.    </p>
+            </div>
+            <div class="service">
+                <img src="./Bildeer/Myopathie.jpg" alt="Myopathie">
+                <h3>Myopathie</h3>
+                <p> Myopathien sind eine Gruppe von seltenen Erkrankungen, die mit einer Schwäche der Muskulatur einhergehen. Weitere mögliche Symptome sind Muskelschwund und Muskelschmerzen. Die Ursachen sind sehr unterschiedlich. Bei einigen Erkrankungen liegt die Ursache in der Muskulatur selbst.</p>
+                </div>
+            <div class="service">
+                <img src="./Bildeer/fidi.jpg" alt="fidi">
+                <h3>Friedreich Ataxie</h3>
+                <p>Bei der Friedreich-Ataxie können neurologische, kardiologische, orthopädische und viele andere Symptome auftreten. Die ersten Zeichen der Friedreich-Ataxie zeigen sich in der Regel bei Kindern und Jugendlichen im Alter zwischen 10 und 15 Jahren, können aber auch erst später im Erwachsenenalter spürbar werden.1 Die einzelnen Symptome sind oft unspezifisch, daher ist das Zusammenspiel der Symptome entscheidend. Wenn mehrere der unten genannten Symptome zutreffen, könnte eine Friedreich-Ataxie vorliegen. Im Verdachtsfall kann ein spezifischer Gentest für Klarheit sorgen. </p>
+                </div>
+        </div>
+
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide active" id="slide0">
+                        <img src="./Bildeer/bwgn.jpg" alt="Bild 5">
+                </div>
+                <div class="slide active" id="slide1">
+                    <a href="../StartTest/blog bwg.html">
+                        <img src="./Bildeer/joggen.jpg" alt="Bild 1">
+                    </a>
+                </div>
+                <div class="slide" id="slide2">
+                    <a href="../StartTest/blog bwg.html">
+                        <img src="./Bildeer/Plank.jpg" alt="Bild 2">
+                    </a>
+                </div>
+                <div class="slide" id="slide3">
+                    <a href="../StartTest/blog bwg.html">
+                        <img src="./Bildeer/Bike.jpg" alt="Bild 3">
+                    </a>
+                </div>
+                <div class="slide" id="slide3">
+                    <a href="../StartTest/blog bwg.html">
+                        <img src="./Bildeer/vly.jpg" alt="Bild 4">
+                    </a>
+                </div>
+                <div class="slide active" id="slide0">
+                    <a href="../StartTest/blog bwg.html">
+                        <img src="./Bildeer/folgen.jpg" alt="Bild 5">
+                    </a>
+                </div>
+                <div class="slide" id="slide3">
+                    <a href="../StartTest/blog sym.html">
+                        <img src="./Bildeer/rücke.jpg" alt="Bild 5">
+                    </a>
+                </div>
+                <div class="slide" id="slide3">
+                    <a href="../StartTest/blog sym.html">
+                        <img src="./Bildeer/opa.jpg" alt="Bild 6">
+                    </a>
+                </div>
+                <div class="slide" id="slide3">
+                    <a href="../StartTest/blog sym.html">
+                        <img src="./Bildeer/essen.jpg" alt="Bild 7">
+                    </a>
+                </div>
+                <div class="slide" id="slide3">
+                    <a href="../StartTest/blog sym.html">
+                        <img src="./Bildeer/faul.jpg" alt="Bild 8">
+                    </a>
+                </div>
+                
+                </div>
+
+            </div>
+        </div>        
+
+        
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3>Über uns</h3>
+                    <p>Wir sind ein engagiertes Team aus der BBS Lingen,<br> das sich auf die Bereitstellung hochwertiger Informationen zu <br>Skelett- und Muskelerkrankungen in den letzten Monaten spezialisiert hat.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Kontakt</h3>
+                    <ul>
+                        <li>Email: info@bbs-lingen-tg.eu</li><br>
+                        <li>Telefon: 0591 710020</li><br>
+                        <li>Adresse: Beckstr. 23</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Folgen Sie uns</h3>
+                    <ul class="social-media">
+                        <li><a href="https://www.bbs-lingen-tg.de/">Website</a></li><br>
+                        <li><a href="https://www.instagram.com/bbs_lingen_tg/">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2024 bbs-lingen-tg GmbH. Alle Rechte vorbehalten.
+            </div>
+        </footer>
+    </div>
+
+
+
+<div class="JavaScript">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script>
+        let timerInterval;
+        let timeElapsed = 0;
+
+        document.getElementById('startButton').addEventListener('click', () => {
+            const name = document.getElementById('name').value.trim();
+            
+            if (!name) {
+                alert("Bitte gib deinen Namen ein!");
+                return;
+            }
+
+            // Quiz starten
+            document.getElementById('quiz').classList.remove('hidden');
+            document.getElementById('startButton').disabled = true;
+
+            // Timer starten
+            timerInterval = setInterval(() => {
+                timeElapsed++;
+                document.getElementById('timer').textContent = `Zeit: ${timeElapsed} Sekunden`;
+            }, 1000);
+        });
+
+        document.getElementById('submitButton').addEventListener('click', () => {
+            const answers = {
+                q1: 'a',
+                q2: 'b',
+                q3: 'b',
+                q4: 'a',
+                q5: 'a'
+            };
+        
+            let allCorrect = true; // Variable hier definieren!
+        
+            for (const [key, correctAnswer] of Object.entries(answers)) {
+                const selected = document.querySelector(`input[name="${key}"]:checked`);
+                if (!selected || selected.value !== correctAnswer) {
+                    allCorrect = false;
+                    break;
+                }
+            }
+        
+            clearInterval(timerInterval);
+        
+            const resultDiv = document.getElementById('result');
+            resultDiv.classList.remove('hidden');
+        
+            const name = document.getElementById('name').value.trim();
+        
+            if (allCorrect) {
+                resultDiv.innerHTML = `<h2>Gratulation, ${name}!</h2><p>Du hast alle Fragen richtig beantwortet in ${timeElapsed} Sekunden.</p>`;
+                
+                launchConfetti(); // Konfetti-Effekt starten
+                saveResult(name, timeElapsed); // Ergebnis speichern
+            } else {
+                resultDiv.innerHTML = `<h2>Leider falsch, ${name}!</h2><p>Versuche es erneut.</p>`;
+                
+                resetQuiz(); // Quiz zurücksetzen
+            }
+        });
+        
+        
+        function launchConfetti() {
+            // Linke Seite
+            confetti({
+                particleCount: 400,
+                angle: 60,
+                spread: 80,
+                origin: { x: 0 } // Startpunkt links
+            });
+        
+            // Rechte Seite
+            confetti({
+                particleCount: 400,
+                angle: 120,
+                spread: 80,
+                origin: { x: 1 } // Startpunkt rechts
+            });
+        }
+        
+
+		function resetQuiz() {
+			document.getElementById('quiz').classList.add('hidden');
+			document.getElementById('startButton').disabled = false;
+
+			timeElapsed = 0;
+
+			document.querySelectorAll("input[type='radio']").forEach(input => input.checked = false);
+		}
+        function saveResult(name, timeElapsed) {
+            fetch('leaderboard.php', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, time: timeElapsed })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    loadLeaderboard();
+                } else {
+                    console.error('Fehler beim Speichern des Ergebnisses:', data.error);
+                }
+            });
+        }
+        
+// Funktion zum Speichern eines Ergebnisses in der Rangliste
+function saveResultToLeaderboard(name, timeElapsed) {
+    // Bestehende Rangliste aus LocalStorage laden
+    let leaderboard = JSON.parse(localStorage.getItem('leaderboard')) || [];
+
+    // Neues Ergebnis hinzufügen
+    leaderboard.push({ name: name, time: timeElapsed });
+
+    // Nach Zeit sortieren (beste Zeit zuerst)
+    leaderboard.sort((a, b) => a.time - b.time);
+
+    // Nur die Top 10 speichern
+    leaderboard = leaderboard.slice(0, 10);
+
+    // Aktualisierte Rangliste in LocalStorage speichern
+    localStorage.setItem('leaderboard', JSON.stringify(leaderboard));
+
+    // Rangliste anzeigen
+    displayLeaderboard();
+}
+
+// Funktion zum Anzeigen der Rangliste
+function displayLeaderboard() {
+    const leaderboard = JSON.parse(localStorage.getItem('leaderboard')) || [];
+    const leaderboardList = document.getElementById('leaderboard-list');
+
+    // Liste leeren
+    leaderboardList.innerHTML = '';
+
+    // Einträge hinzufügen
+    leaderboard.forEach((entry, index) => {
+        const listItem = document.createElement('li');
+        listItem.textContent = `${index + 1}. ${entry.name} - ${entry.time} Sekunden`;
+        leaderboardList.appendChild(listItem);
+    });
+}
+
+// Nach erfolgreichem Abschluss des Quiz speichern und Rangliste anzeigen
+if (allCorrect) {
+    resultDiv.innerHTML = `<h2>Gratulation, ${name}!</h2><p>Du hast alle Fragen richtig beantwortet in ${timeElapsed} Sekunden.</p>`;
+    
+    launchConfetti(); // Konfetti auslösen
+    
+    saveResultToLeaderboard(name, timeElapsed); // Ergebnis speichern
+}
+            fetch('leaderboard.php')
+                .then(response => response.json())
+                .then(data => {
+                    const leaderboardList = document.getElementById('leaderboard-list');
+                    leaderboardList.innerHTML = '';
+        
+                    data.forEach(entry => {
+                        const listItem = document.createElement('li');
+                        listItem.textContent = `${entry.name} - ${entry.time} Sekunden`;
+                        leaderboardList.appendChild(listItem);
+                    });
+        
+                    document.getElementById('leaderboard').classList.remove('hidden');
+                });
+        
+        
+        // Nach erfolgreichem Abschluss des Quiz speichern und Rangliste laden
+        if (allCorrect) {
+            resultDiv.innerHTML = `<h2>Gratulation, ${name}!</h2><p>Du hast alle Fragen richtig beantwortet in ${timeElapsed} Sekunden.</p>`;
+            
+            launchConfetti();
+            
+            saveResult(name, timeElapsed); // Ergebnis speichern
+        }
+        
+    </script>
+        <script>
+            const slides = document.querySelectorAll('.slide');
+            let currentIndex = 0;
+        
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.classList.remove('active');
+                    if (i === index) {
+                        slide.classList.add('active');
+                        slide.style.transform = 'translateX(0)';
+                    } else if (i === (index - 1 + slides.length) % slides.length) {
+                        slide.style.transform = 'translateX(-100%)';
+                    } else if (i === (index + 1) % slides.length) {
+                        slide.style.transform = 'translateX(100%)';
+                    } else {
+                        slide.style.transform = 'translateX(200%)';
+                    }
+                });
+            }
+        
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % slides.length;
+                showSlide(currentIndex);
+            }
+        
+            function prevSlide() {
+                currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                showSlide(currentIndex);
+            }
+        
+            setInterval(nextSlide, 3000); // Wechsel alle 9 Sekunden
+        
+            showSlide(currentIndex);
+        </script>
+        
+    </div>
+</body>
+</html>
