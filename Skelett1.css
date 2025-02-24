@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 50%;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    position: relative;
+}
+
+/* Responsive Design */
+
+
+
+
+
+    .skeleton-image {
+        width: 100%; /* Bild passt sich der Containergröße an */
+    }
+
+    .label {
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 12px;
+        cursor: pointer;
+        transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+
+    .label:hover {
+        transform: scale(1.2);
+        background-color: #007BFF;
+        color: white;
+    }
+
+    .tooltip {
+        position: absolute;
+        top: -30px; /* Position oberhalb des Labels */
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #333;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 15px;
+        display: none; /* Standardmäßig versteckt */
+    }
+
+    .label:hover .tooltip {
+        display: block; /* Tooltip beim Hover anzeigen */
+    }
+
+    /* Knochenpositionen (Prozentwerte für Responsivität) */
+    .label.schaedel { top: 5%; left: 45%; }
+    .label.kiefer { top: 13%; left: 45%; }
+    .label.schluesselbein { top: 20%; left: 40%; }
+    .label.schulter { top: 20%; left: 30%; }
+    .label.oberarmknochen { top: 30%; left: 28%; }
+    .label.ellenbogen { top: 40%; left: 30%; }
+    .label.unterarm { top: 50%; left: 30%; }
+    .label.wirbelsaeule { top: 35%; left: 48%; }
+    .label.brustbein { top: 25%; left: 48%; }
+    .label.rippen { top: 28%; left: 60%; }
+    .label.gesaess { top: 50%; left: 48%; }
+    .label.hand { top: 60%; left: 25%; }
+
+
+
+
+
+
+
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .image-container {
+        position: relative;
+        margin: 20px;
+      }
+      .image-container img {
+        max-width: 100%;
+      }
+      .drop-zone {
+        position: absolute;
+        border: 2px dashed #ccc;
+        border-radius: 5px;
+        text-align: center;
+        padding: 5px;
+        cursor: pointer;
+      }
+      .drop-zone[data-label="SLAP-Region"] { top: 80px; left: 200px; width: 80px; height: 30px; }
+      .drop-zone[data-label="Lange Bizeps-Sehne"] { top: 175px; left: 199px; width: 80px; height: 30px; }
+      .drop-zone[data-label="Kurze Bizeps-Sehne"] { top: 240px; left: 205px; width: 80px; height: 30px; }
+      .drop-zone[data-label="BizepsMuskel"] { top: 310px; left: 220px; width: 80px; height: 30px; }
+      .drop-zone[data-label="Distale Bizeps-Sehne"] { top: 440px; left: 15px; width: 80px; height: 30px; }
+
+      /* Weitere Drop-Zonen entsprechend der Bild-Beschriftung hinzufügen */
+      .drag-item {
+        margin: 10px;
+        padding: 5px 10px;
+        background-color: #f0f0f0;
+        border-radius: 5px;
+        cursor: grab;
+      }
+
+
+
+
+
+
+      h1 {
+        font-size: 2.5rem;
+        color: #333;
+    }
+    p {
+        font-size: 1.2rem;
+        color: #ffffff;
+    }
+    p.h1 {
+        font-size: 1.2rem;
+        color: #333;
+    }
+    .slider-container {
+        margin: 30px auto;
+        width: 60%;
+        position: relative;
+    }
+    input[type="range"] {
+        width: 100%;
+        -webkit-appearance: none;
+        appearance: none;
+        height: 10px;
+        background: #ddd;
+        border-radius: 5px;
+        outline: none;
+        cursor: pointer;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        background-color: #007bff;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .labels {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        top: 40px; /* Abstand zu Slider */
+        width: 100%;
+    }
+    .labels span {
+        font-size: 1rem;
+        color: #555;
+    }
+    button {
+        margin-top: 40px;
+        padding: 12px 25px;
+        font-size: 1.2rem;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #218838;
+    }
+    #result {
+        margin-top: 20px;
+        font-size: 1.5rem;
+    }
+
+
+
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(10, 30px);
+        grid-template-rows: repeat(10, 30px);
+        gap: 2px;
+        justify-content: center;
+        margin: 20px auto;
+    }
+
+    .cell {
+        position: relative;
+    }
+
+    .cell input {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        font-size: 16px;
+        text-transform: uppercase;
+        border: 1px solid #ccc;
+    }
+
+    .clue-list {
+        margin-top: 20px;
+    }
+
+    button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    #result {
+        margin-top: 15px;
+        font-weight: bold;
+    }
