@@ -62,7 +62,14 @@ body {
     padding: 10px 20px;
     color: #000000;
 }
-
+.navbar1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #b9b7b7;
+    padding: 10px 20px;
+    color: #000000;
+}
 .nav-items {
     list-style-type: none;
     display: flex;
