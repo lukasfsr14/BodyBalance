@@ -87,7 +87,7 @@ ul {
     float: left;
   }
   
-  li a {
+  anc {
     display: block;
     padding: 8px;
     text-decoration: none;
@@ -136,6 +136,13 @@ footer {
 .footer-section a{
    color:#FFFFFF;
 }
+
+
+.social-media a{
+   color:#FFFFFF;
+}
+
+
 .footer-bottom{
    text-align :center; 
 }
