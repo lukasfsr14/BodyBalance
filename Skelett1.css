@@ -19,7 +19,14 @@ body {
 }
 
 /* Responsive Design */
-
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #b9b7b7;
+    padding: 10px 20px;
+    color: #000000;
+}
 
 
 
