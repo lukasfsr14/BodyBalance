@@ -24,6 +24,9 @@ label {
     display: block;
     margin-bottom: 5px;
 }
+a.Test234{
+    color: white;
+}
 input[type="text"],
 input[type="email"],
 textarea {
