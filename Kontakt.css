@@ -26,6 +26,7 @@ label {
 }
 a.Test234{
     color: white;
+    text-decoration: none;
 }
 input[type="text"],
 input[type="email"],
