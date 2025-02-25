@@ -91,7 +91,7 @@ ul {
     float: left;
   }
   
-  anc {
+  li a {
     display: block;
     padding: 8px;
     text-decoration: none;
