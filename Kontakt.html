@@ -35,21 +35,24 @@
         <p>Wir sind ein engagiertes Team, das sich der Förderung von Muskel und Skelett heilungen widmet. Unser Ziel ist es, Spenden dafür zu sammeln.</p>
     </section>
 
-    <section>
-        <h2>Kontakt</h2>
-        <form action="submit.php" method="post">
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name" required><br><br>
-    
-            <label for="email">E-Mail:</label><br>
-            <input type="email" id="email" name="email" required><br><br>
-    
-            <label for="message">Nachricht:</label><br>
-            <textarea id="message" name="message" rows="4" required></textarea><br><br>
-    
-            <input type="submit" value="Senden">
-        </form>
-    </section>
+<section>
+    <h2>Kontakt</h2>
+    <form id="contactForm">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">E-Mail:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="message">Nachricht:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+        <input type="submit" value="Senden">
+    </form>
+    <div id="thankYouMessage" style="display: none;">
+        <p>Vielen Dank für Ihre Nachricht!</p>
+    </div>
+</section>
 
     <section>
         <h2>Unterstützen Sie uns und Kinder</h2>
@@ -101,4 +104,19 @@
         &copy; 2024 bbs-lingen-tg GmbH. Alle Rechte vorbehalten.
     </div>
 </footer>
+    <Script>
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Hier können Sie den Code zum Senden der Daten an den Server einfügen
+    
+    // Formular ausblenden
+    this.style.display = 'none';
+    
+    // Dankes-Nachricht anzeigen
+    document.getElementById('thankYouMessage').style.display = 'block';
+});
+</script>
+    </Script>
 </html>
