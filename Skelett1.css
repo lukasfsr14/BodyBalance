@@ -69,10 +69,10 @@ body {
     }
 
     /* Knochenpositionen (Prozentwerte für Responsivität) */
-    .label.schaedel { top: 5%; left: 45%; }
-    .label.kiefer { top: 13%; left: 45%; }
-    .label.schluesselbein { top: 20%; left: 40%; }
-    .label.schulter { top: 20%; left: 30%; }
+    .label.schaedel { top: 9%; left: 45%; }
+    .label.kiefer { top: 18%; left: 45%; }
+    .label.schluesselbein { top: 40%; left: 40%; }
+    .label.schulter { top: 350%; left: 30%; }
     .label.oberarmknochen { top: 30%; left: 28%; }
     .label.ellenbogen { top: 40%; left: 30%; }
     .label.unterarm { top: 50%; left: 30%; }
@@ -80,7 +80,7 @@ body {
     .label.brustbein { top: 25%; left: 48%; }
     .label.rippen { top: 28%; left: 60%; }
     .label.gesaess { top: 50%; left: 48%; }
-    .label.hand { top: 80%; left: 25%; }
+    .label.hand { top: 100%; left: 25%; }
 
 
 
